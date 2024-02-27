@@ -29,7 +29,7 @@ const JacketRecommendation = () => {
 
     return (
         <div>
-            <h2>Jacket Recommendation</h2>
+            <h2>Do I need a jacket?</h2>
             <p>{recommendation}</p>
         </div>
     );
