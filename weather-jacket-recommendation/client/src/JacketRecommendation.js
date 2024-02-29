@@ -11,7 +11,7 @@ const JacketRecommendation = () => {
             const temperature = weatherData?.main?.temp;
             const hasRain = weatherData?.rain != null;
 
-            let jacketRecommendation = "no jacket"; // Default
+            let jacketRecommendation = "could not load recommendation"; // Default
 
             if (hasRain) jacketRecommendation = "a rain jacket";
             else if (temperature > 20) jacketRecommendation = "no jacket";
