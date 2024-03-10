@@ -17,7 +17,9 @@ const JacketRecommendation = () => {
                 let jacketRecommendation = ""; // Default
                 let needJacketResponse = "YES";
 
-                if (hasRain) {
+                if (hasRain && feelsLike <= 8) {
+                    jacketRecommendation = "wear a waterproof winter jacket";
+                } else if (hasRain) {
                     jacketRecommendation = "rain jacket";
                 } else if (feelsLike > 20) {
                     jacketRecommendation = "no jacket";
