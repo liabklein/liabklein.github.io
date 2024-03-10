@@ -11,7 +11,7 @@ const JacketRecommendation = () => {
             const { latitude, longitude } = position.coords;
             try {
                 const weatherData = await fetchWeatherData(latitude, longitude);
-                const temperature = weatherData?.main?.temp;
+                const feelsLike = weatherData?.main?.feels_like;
                 const hasRain = weatherData?.rain != null;
 
                 let jacketRecommendation = ""; // Default
@@ -19,16 +19,16 @@ const JacketRecommendation = () => {
 
                 if (hasRain) {
                     jacketRecommendation = "rain jacket";
-                } else if (temperature > 20) {
+                } else if (feelsLike > 20) {
                     jacketRecommendation = "no jacket";
                     needJacketResponse = "NO";
-                } else if (temperature <= 20 && temperature > 15) {
+                } else if (feelsLike <= 20 && feelsLike > 15) {
                     jacketRecommendation = "long sleeves";
-                } else if (temperature <= 15 && temperature > 10) {
+                } else if (feelsLike <= 15 && feelsLike > 10) {
                     jacketRecommendation = "light jacket";
-                } else if (temperature <= 10 && temperature > 0) {
+                } else if (feelsLike <= 10 && feelsLike > 0) {
                     jacketRecommendation = "medium jacket";
-                } else if (temperature <= 0) {
+                } else if (feelsLike <= 0) {
                     jacketRecommendation = "winter jacket";
                 }
 
