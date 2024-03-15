@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
 }
 
 .App-logo {
@@ -26,6 +28,15 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.info-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 24px;
+  color: #FFFFFF; /* or any color that suits your design */
 }
 
 @keyframes App-logo-spin {
