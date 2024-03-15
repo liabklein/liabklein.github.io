@@ -48,8 +48,10 @@ const AboutModal = ({ setIsModalOpen }) => {
         <div style={{margin: '0 auto', textAlign: 'center'}}>
         <h2>About This App</h2>
         <br></br>
-        <p>This app helps you decide whether you need a jacket based on the current weather conditions.</p>
-        <p>Jacket icons created by <a href="https://www.flaticon.com/free-icons/jacket" title="jacket icons" target="_blank" rel="noopener noreferrer">photo3idea_studio</a></p>
+        <p>This app helps you decide which jacket to wear based on current weather conditions.</p>
+        <div style={{fontSize: '0.9rem', color:'#808080', position: 'fixed', bottom: '10%', left: '50%', transform: 'translateX(-50%)'}}>
+            <p>Jacket icons created by <a href="https://www.flaticon.com/free-icons/jacket" title="jacket icons" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#808080' }}>photo3idea_studio</a></p>
+        </div>
       </div>
       </div>
     );
