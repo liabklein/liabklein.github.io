@@ -50,7 +50,7 @@ const AboutModal = ({ setIsModalOpen }) => {
         <p>This app helps you decide which jacket to wear based on current weather conditions.</p>
         <br></br>
         <div style={{fontSize: '0.9rem', color:'#808080', position: 'fixed', bottom: '5%', left: '50%', transform: 'translateX(-50%)'}}>
-            <p>Jacket icons created by <a href="https://www.flaticon.com/free-icons/jacket" title="jacket icons" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#808080' }}>photo3idea_studio</a></p>
+            <p>Icons by <a href="https://www.flaticon.com/free-icons/jacket" title="jacket icons" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#808080' }}>photo3idea_studio</a></p>
         </div>
       </div>
       </div>
