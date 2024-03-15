@@ -40,16 +40,16 @@ const AboutModal = ({ setIsModalOpen }) => {
           top: '10px',
           right: '10px',
           cursor: 'pointer',
-          color: '#282c34', // Adjust for contrast as needed
-          fontSize: '1.5rem', // Adjust size as needed
+          color: '#282c34',
+          fontSize: '1.5rem',
         }}
       />
         {/* Modal content */}
         <div style={{margin: '0 auto', textAlign: 'center'}}>
         <h2>About This App</h2>
-        <br></br>
         <p>This app helps you decide which jacket to wear based on current weather conditions.</p>
-        <div style={{fontSize: '0.9rem', color:'#808080', position: 'fixed', bottom: '10%', left: '50%', transform: 'translateX(-50%)'}}>
+        <br></br>
+        <div style={{fontSize: '0.9rem', color:'#808080', position: 'fixed', bottom: '5%', left: '50%', transform: 'translateX(-50%)'}}>
             <p>Jacket icons created by <a href="https://www.flaticon.com/free-icons/jacket" title="jacket icons" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#808080' }}>photo3idea_studio</a></p>
         </div>
       </div>
