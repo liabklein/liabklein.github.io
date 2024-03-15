@@ -21,7 +21,7 @@ const AboutModal = ({ setIsModalOpen }) => {
           zIndex: 1000, // Ensure the modal appears above the overlay
           borderRadius: '10px',
           boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-          width: isMobile ? '90%' : 'auto', // Use more screen width on mobile
+          width: isMobile ? '80%' : 'auto', // Use more screen width on mobile
           minHeight: '30vh', // Ensures the modal has a minimum height of 50% of the viewport height
           overflowY: 'auto', // Adds scroll to the modal content if it overflows vertically
           fontSize: '1.2rem', // Larger text
