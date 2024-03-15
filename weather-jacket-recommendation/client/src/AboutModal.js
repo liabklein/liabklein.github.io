@@ -45,7 +45,7 @@ const AboutModal = ({ setIsModalOpen }) => {
         }}
       />
         {/* Modal content */}
-        <div style={{ maxWidth: '70%', margin: '0 auto', textAlign: 'center'}}>
+        <div style={{margin: '0 auto', textAlign: 'center'}}>
         <h2>About This App</h2>
         <br></br>
         <p>This app helps you decide whether you need a jacket based on the current weather conditions.</p>
