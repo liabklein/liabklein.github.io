@@ -22,7 +22,6 @@ const AboutModal = ({ setIsModalOpen }) => {
           borderRadius: '10px',
           boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
           width: 'auto', // Adjust based on content or specify a value
-          maxHeight: '80vh', // Limits the height, making it scrollable if content exceeds
           minHeight: '30vh', // Ensures the modal has a minimum height of 50% of the viewport height
           overflowY: 'auto', // Adds scroll to the modal content if it overflows vertically
           fontSize: '1.2rem', // Larger text
