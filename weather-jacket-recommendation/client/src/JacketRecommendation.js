@@ -25,9 +25,9 @@ const JacketRecommendation = () => {
                     jacketRecommendation = "no jacket";
                     needJacketResponse = "NO";
                 } else if (feelsLike <= 20 && feelsLike > 15) {
-                    jacketRecommendation = "long sleeves";
+                    jacketRecommendation = "long sleeve shirt or sweatshirt";
                 } else if (feelsLike <= 15 && feelsLike > 10) {
-                    jacketRecommendation = "light jacket";
+                    jacketRecommendation = "light jacket or sweatshirt";
                 } else if (feelsLike <= 10 && feelsLike > 0) {
                     jacketRecommendation = "medium jacket";
                 } else if (feelsLike <= 0) {
