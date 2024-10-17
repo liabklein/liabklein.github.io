@@ -55,7 +55,7 @@ const JacketRecommendation = () => {
         <div>
             {/* Title container to keep the title fixed in position */
             <div style={{ minHeight: '64px' }}>
-            <h2>Do I need a jacket???</h2>
+            <h2>Do I need a jacket?</h2>
             </div>}
             {/* Content container with conditional rendering for loading/error/jacket recommendation */}
             <div style={{ minHeight: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
