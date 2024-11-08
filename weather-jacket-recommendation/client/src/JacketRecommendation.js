@@ -49,7 +49,8 @@ const JacketRecommendation = () => {
                     window.gtag('event', 'recommendation_loaded', {
                         event_category: 'Recommendation',
                         event_label: 'Jacket Recommendation Latency',
-                        value: latency, // 'value' should be an integer
+                        value: latency,
+                        recommendation_load_time_ms: latency,
                     });
                 }
             } catch (error) {
