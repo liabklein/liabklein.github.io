@@ -4,9 +4,11 @@ import { fetchWeatherData } from './WeatherService';
 const JacketRecommendation = () => {
     const [recommendation, setRecommendation] = useState('');
     const [needJacket, setNeedJacket] = useState('Loading...');
-    const [isLoading, setIsLoading] = useState(true); // Add state to track loading status
+    const [isLoading, setIsLoading] = useState(true);
+    const [startTime, setStartTime] = useState(null);
 
     useEffect(() => {
+        setStartTime(Date.now());
         navigator.geolocation.getCurrentPosition(async (position) => {
             const { latitude, longitude } = position.coords;
             try {
@@ -37,26 +39,65 @@ const JacketRecommendation = () => {
                 setRecommendation(jacketRecommendation);
                 setNeedJacket(needJacketResponse);
                 setIsLoading(false); // Update loading status
+
+                // Record the end time and calculate latency
+                const endTime = Date.now();
+                const latency = endTime - startTime;
+
+                // Log the latency event to Google Analytics
+                if (window.gtag) {
+                    window.gtag('event', 'recommendation_loaded', {
+                        event_category: 'Recommendation',
+                        event_label: 'Jacket Recommendation Latency',
+                        value: latency, // 'value' should be an integer
+                    });
+                }
             } catch (error) {
                 console.error("Weather data fetch error:", error);
                 setRecommendation("Failed to retrieve weather data.");
                 setNeedJacket("ERROR");
                 setIsLoading(false); // Update loading status
+
+                // Record the end time and calculate latency
+                const endTime = Date.now();
+                const latency = endTime - startTime;
+
+                // Send the error event to Google Analytics
+                if (window.gtag) {
+                    window.gtag('event', 'recommendation_error', {
+                        event_category: 'Recommendation',
+                        event_label: 'Weather Data Fetch Error',
+                        value: latency,
+                    });
+                }
             }
         }, (error) => {
             console.error("Geolocation error:", error);
             setRecommendation("Geolocation error. Unable to retrieve location.");
             setNeedJacket("ERROR");
             setIsLoading(false); // Update loading status
+
+            // Record the end time and calculate latency
+            const endTime = Date.now();
+            const latency = endTime - startTime;
+
+            // Send the error event to Google Analytics
+            if (window.gtag) {
+                window.gtag('event', 'recommendation_error', {
+                    event_category: 'Recommendation',
+                    event_label: 'Geolocation Error',
+                    value: latency,
+                });
+            }
         });
     }, []);
 
     return (
         <div>
             {/* Title container to keep the title fixed in position */
-            <div style={{ minHeight: '64px' }}>
-            <h2>Do I need a jacket?</h2>
-            </div>}
+                <div style={{ minHeight: '64px' }}>
+                    <h2>Do I need a jacket?</h2>
+                </div>}
             {/* Content container with conditional rendering for loading/error/jacket recommendation */}
             <div style={{ minHeight: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                 <p style={{ fontSize: isLoading ? '24px' : '96px', margin: '20px 0', fontWeight: 'bold' }}>{needJacket}</p>
