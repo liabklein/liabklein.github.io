@@ -5,10 +5,9 @@ const JacketRecommendation = () => {
     const [recommendation, setRecommendation] = useState('');
     const [needJacket, setNeedJacket] = useState('Loading...');
     const [isLoading, setIsLoading] = useState(true);
-    const [startTime, setStartTime] = useState(null);
 
     useEffect(() => {
-        setStartTime(Date.now());
+        const startTime = Date.now();
         navigator.geolocation.getCurrentPosition(async (position) => {
             const { latitude, longitude } = position.coords;
             try {
