@@ -25,7 +25,7 @@ const AboutModal = ({ setIsModalOpen }) => {
           minHeight: '30vh', // Ensures the modal has a minimum height of 50% of the viewport height
           overflowY: 'auto', // Adds scroll to the modal content if it overflows vertically
           fontSize: '1.2rem', // Larger text
-          color: '#282c34', // Text color for contrast
+          color: '#121E3C', // Text color for contrast
           display: 'flex', // Use flexbox for layout
           flexDirection: 'column', // Stack children vertically
           justifyContent: 'space-around', // Distribute space around items for a taller appearance
@@ -40,7 +40,7 @@ const AboutModal = ({ setIsModalOpen }) => {
           top: '10px',
           right: '10px',
           cursor: 'pointer',
-          color: '#282c34',
+          color: '#121E3C',
           fontSize: '1.5rem',
         }}
       />
